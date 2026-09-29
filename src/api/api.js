@@ -1,6 +1,9 @@
 import axios from "axios"
 const API = axios.create({
-    baseURL: "http://localhost:5000"
+    // baseURL: "http://localhost:5000"
+
+
+    baseURL: "https://backend-todo-rust.vercel.app"
 })
 
 API.interceptors.request.use(config => {
