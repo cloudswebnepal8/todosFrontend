@@ -3,7 +3,7 @@ const API = axios.create({
     // baseURL: "http://localhost:5000"
 
 
-    baseURL: "https://backend-todo-rust.vercel.app"
+    baseURL: "https://backend-todo-new.vercel.app"
 })
 
 API.interceptors.request.use(config => {
