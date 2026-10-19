@@ -56,7 +56,7 @@ function Signup() {
                     })}
 
                     required />
-                <button type='submit'>Signup</button>
+                <button type='submit' className=' bg-blue-400 text-white px-2 py-1'>Signup</button>
                 <p>Already have an account ?
                     <Link to="/login">Login</Link>
                 </p>

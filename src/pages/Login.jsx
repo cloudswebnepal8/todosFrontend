@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import API from './../api/api';
-import {toast} from "react-toastify"
+import { toast } from "react-toastify"
 
 function Login() {
     const nav = useNavigate()
@@ -55,37 +55,39 @@ function Login() {
     return (
         <div className='flex min-h-screen justify-center items-center'>
             <div className='flex flex-col gap-6 text-center' >
-                <h1>Login</h1>
+                <h1>Welcome Back.</h1>
 
                 {
                     !showOtp ? (
                         <>
-                            <input type="email" placeholder='Enter your email'
-                                onChange={(e) =>
-                                    setForm({
-                                        ...form,
-                                        email: e.target.value
 
-                                    })
-                                }
+                                <input type="email" placeholder='Enter your email'
+                                    onChange={(e) =>
+                                        setForm({
+                                            ...form,
+                                            email: e.target.value
 
-                            />
-                            <input type="password" placeholder='Enter your password'
-                                onChange={(e) =>
-                                    setForm({
-                                        ...form,
-                                        password: e.target.value
+                                        })
+                                    }
 
-                                    })
-                                }
+                                />
+                                <input type="password" placeholder='Enter your password'
+                                    onChange={(e) =>
+                                        setForm({
+                                            ...form,
+                                            password: e.target.value
 
-                            />
+                                        })
+                                    }
 
-                            <button type='submit' onClick={sendOTP}>Login</button>
+                                />
 
-                            <p>Don't have an account ?
-                                <Link to="/signup">Signup</Link>
-                            </p>
+                                <button type='submit' onClick={sendOTP} className=' bg-blue-400 text-white px-2 py-1'>Login</button>
+
+                                <p>Don't have an account ?
+                                    <Link to="/signup">Signup</Link>
+                                </p>
+
                         </>
 
                     ) : (

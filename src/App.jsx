@@ -7,15 +7,18 @@ import About from './pages/About'
 import PublicRoute from './routes/PublicRoute'
 import Login from './pages/Login';
 import Todo from './pages/Todo'
+import Navbar from './components/Navbar'
+import ProtectedRoute from './routes/ProtectedRoute'
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={
           <PublicRoute>
-            <Signup/>
+            <Signup />
           </PublicRoute>
 
 
@@ -29,7 +32,14 @@ function App() {
 
         } />
         <Route path='/about' element={<About />} />
-        <Route path='/todo' element={<Todo />} />
+        <Route path='/features' element={
+
+          <ProtectedRoute>
+            <Todo />
+
+
+          </ProtectedRoute>
+        } />
       </Routes>
     </>
   )
